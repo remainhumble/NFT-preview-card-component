@@ -16,16 +16,28 @@ body {
   background: hsl(217, 54%, 11%);
 }
 
-h1:hover {
+.card__heading {
+  font-weight: 600;
+  margin: 8px 0;
+  color: hsl(0, 0%, 100%);
+}
+
+.card__heading:hover {
   color: hsl(178, 100%, 50%);
   cursor: pointer;
+}
+
+.card__heading:focus {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+  outline: none;
 }
 
 p {
   font-size: 18px;
 }
 
-#card {
+.card {
   transform: scale(0.7);
   background: hsl(216, 50%, 16%);
   width: 355px;
@@ -44,7 +56,7 @@ p {
   position: relative;
 }
 
-.icon-view {
+.card__icon-view {
   position: absolute;
   inset: 0;
   display: flex;
@@ -57,21 +69,15 @@ p {
   transition: opacity 200ms ease, visibility 200ms ease;
 }
 
-.icon-view img {
+.card__icon-view img {
   width: 40px;
   height: 40px;
 }
 
-.card__image:hover .icon-view {
+.card__image:hover .card__icon-view {
   opacity: 1;
   visibility: visible;
   cursor: pointer;
-}
-
-.card__heading {
-  font-weight: 600;
-  margin: 8px 0;
-  color: hsl(0, 0%, 100%);
 }
 
 .card__paragraph {
@@ -80,7 +86,7 @@ p {
   margin: 10px 0;
 }
 
-#eth {
+.eth {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,24 +94,24 @@ p {
   padding: 16px 0;
 }
 
-#price {
+.price {
   color: hsl(178, 100%, 50%);
   font-weight: 400;
 }
 
-#timeleft {
+.timeleft {
   color: hsl(215, 51%, 70%);
   font-weight: 300;
 }
 
-#creator {
+.creator {
   display: flex;
   align-items: center;
   margin: 1.25em 0;
   font-weight: 400;
 }
 
-#creator img {
+.creator img {
   width: 2.5em;
   height: 2.5em;
   border-radius: 50%;
@@ -113,16 +119,27 @@ p {
   border: 1px solid hsl(0, 0%, 100%);
 }
 
-#creation-of {
+.creation-of {
   color: hsl(215, 51%, 70%);
   padding-right: 4px;
 }
 
-#creator__name {
+.creator__name {
   color: hsl(0, 0%, 100%);
 }
 
-#creator__name:hover {
+.creator__name a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.creator__name a:hover {
   color: hsl(178, 100%, 50%);
   cursor: pointer;
+}
+
+.creator__name a:focus {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+  outline: none;
 }
